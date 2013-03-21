@@ -1,0 +1,16 @@
+#exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+auto: true
+pygments: true
+#paginate: 10
+#destination: /home/ben/git-repos/keithmillar.github.com
+main_title: "Keith Millar"
+description : "Keith's Diary and Other Stuff"
+title : Keith's Diary and Other Stuff
+tagline : Thoughts and Ramblings
+author :
+  name : Keith Millar
+  email : keith@fnkmillar.com
+  github : keithmillar
+  twitter : lottimillar
+  feedburner : feedname
+
