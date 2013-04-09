@@ -110,23 +110,23 @@
 
 
 p {
-	font: 'UbuntuRegular', Arial, sans-serif;letter-spacing: 0;
+	font: 18px/23px 'UbuntuRegular', Arial, sans-serif;letter-spacing: 0;
 }
 /*h1 {font: 50px/58px 'UbuntuMonoRegular', Arial, sans-serif;letter-spacing: 0;} */
 h1 {
-	font: 'UbuntuBold', Arial, sans-serif;letter-spacing: 0;
+	font: 35px/40px 'UbuntuMediumItalic', Arial, sans-serif;letter-spacing: 0;
 }
 h2 {
-	font: 'UbuntuRegular', Arial, sans-serif;
+	font: 30px/35px 'UbuntuRegular', Arial, sans-serif;
 }
 h3 {
-	font: 'UbuntuRegular' Arial, sans-serif;
+	font: 25px/30px 'UbuntuRegular' Arial, sans-serif;
 }
 ul {
-	font: 'UbuntuRegular', Arial, sans-serif;
+	font: 18px/23px 'UbuntuRegular', Arial, sans-serif;
 }
 li {
-	font: 'UbuntuRegular', Arial, sans-serif;
+	font: 18px/23px 'UbuntuRegular', Arial, sans-serif;
 }
 
 a {
@@ -146,7 +146,7 @@ div.figure  {
 	padding: 0.5em;
 	background-color:lightgray;
 	text-align: center;
-	font: 'UbuntuRegular', Arial, sans-serif;
+	font: 15px/16px 'UbuntuRegular', Arial, sans-serif; 
 	text-indent: 0;
 }
 
