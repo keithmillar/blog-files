@@ -110,17 +110,22 @@
 
 
 p {
-	font: 18px/23px 'UbuntuRegular', Arial, sans-serif;letter-spacing: 0;
+	font: 18px/23px 'UbuntuRegular', Arial, sans-serif;
+      margin-left: 40px;
+margin-right: 40px;
 }
 /*h1 {font: 50px/58px 'UbuntuMonoRegular', Arial, sans-serif;letter-spacing: 0;} */
 h1 {
-	font: 35px/40px 'UbuntuMediumItalic', Arial, sans-serif;letter-spacing: 0;
+	font: 35px/40px 'UbuntuMediumItalic', Arial, sans-serif;
+      margin-left: 40px;
 }
 h2 {
 	font: 30px/35px 'UbuntuRegular', Arial, sans-serif;
+      margin-left: 40px;
 }
 h3 {
 	font: 25px/30px 'UbuntuRegular' Arial, sans-serif;
+      margin-left: 40px;
 }
 ul {
 	font: 18px/23px 'UbuntuRegular', Arial, sans-serif;
@@ -131,25 +136,27 @@ li {
 
 a {
 	color:#383838;
-	border-bottom:1px solid;
+/*	border-bottom:1px solid;*/
 	text-decoration:none;
 }
 a:hover {
 	color:#FF2B06;
-} 
+}
 
-div.figure  {
-	float: left;
-	width: 600px%;
+.figure  {
+/*	float: left; */
+	width: 600px;
 	border: thin black solid;
 	margin: 0.5em;
 	padding: 0.5em;
 	background-color:lightgray;
 	text-align: center;
-	font: 15px/16px 'UbuntuRegular', Arial, sans-serif; 
+	font: 15px/16px 'UbuntuRegular', Arial, sans-serif;
 	text-indent: 0;
+      	margin-left: auto;
+      	margin-right: auto;
 }
 
-div.figure  {
-margin-right: 100px; /* stops text wrapping around images */
+.figure  {
+/* margin-right: 100px;*/ /* stops text wrapping around images */
 }

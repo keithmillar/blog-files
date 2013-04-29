@@ -1,6 +1,6 @@
 ---
 layout: default
-title: keith's Diary and other Stuff 
+title: "keith's Diary and other Stuff" 
 tagline: Thoughts and Ramblings
 ---
 
@@ -9,7 +9,7 @@ tagline: Thoughts and Ramblings
 <p><em>{{ post.date | date:"%d %b %Y" }}</em></p>
   {% if post.excerpt %}
         {{ post.excerpt | markdownify }}
-<p align="right"><a href="{{ post.url }}">Read More</a></p>
+<div id="read-more"><a href="{{ post.url }}">Continue Reading >></a></div>
     {% else %}
         {{ post.content }}
     {% endif %}

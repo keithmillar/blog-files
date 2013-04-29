@@ -1,10 +1,9 @@
 {% include head.html %}
-<div id="wrap">
-	<div id="header"><!-- Start Header -->
+<div id="wrapper">
+	<header><!-- Start Header -->
 	{% include top-menu.html %}
-	</div><!-- End Header -->
-		
-	<div id="main"><!-- Start Column 1-->
+	</header><!-- End Header -->
+	<section><!-- Start Column 1-->
 <h1>{{ page.title }}</h1>
 <hr size="4" color="black">
  {{ content }}
@@ -16,14 +15,10 @@
  <span class="year">{{ page.date | date: '%Y' }}</span>
  </date></p>
 {% include pagination.html %}
-	</div><!-- end Column 1 -->
-	<div id="sidebar"><!-- Start Column 2 and Sidebar -->
-	{% include left-sidebar.html %}
-	</div><!-- End Column 2 and Sidebar -->
-	<div id="footer"><!-- Start Footer -->
+	</section><!-- end Column 1 -->
+	<footer><!-- Start Footer -->
 	{% include footer.html %}
-	
-	</div><!-- End Footer -->
+	</footer><!-- End Footer -->
 </div>
 </body>
 </html>
