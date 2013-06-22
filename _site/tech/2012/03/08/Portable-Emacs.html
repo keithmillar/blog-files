@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Keith Millar - Portable Emacs </title>
+	
+	<meta name="description" content="">
+	
+	<meta name="author" content=" Keith Millar">
+	<link rel="stylesheet" href="/css/body.css"> 
+<!--	<link rel="stylesheet" href="/css/left-container.css"> -->
+	<link rel="stylesheet" href="/css/ubuntu-fonts.css"> 
+	<!--<link rel="stylesheet" href="/css/fonts.css">-->
+	<link rel="stylesheet" href="/css/pygments.css"> 
+	<link rel="icon" href="/css/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/css/images/favicon.ico">
+</head>
+<body>
+
+<div id="wrapper">
+	<header><!-- Start Header -->
+	<ul id="nav">
+  <li><a href="/">Home</a></li>
+  <li><a href="/tech.html">Tech</a></li>
+  <li><a href="/recipes.html">Recipes</a></li>
+  <li><a href="/archive.html">Archive</a></li>
+</ul>
+
+	</header><!-- End Header -->
+	<section><!-- Start Column 1-->
+<h1>Portable Emacs </h1>
+<hr size="4" color="black">
+ <p>While reading gmane.emacs.help I came accross this post where somebody asked how he could make a portable app out of Emacs&#8217; Windows version.</p>
+
+<p>So since I&#8217;m still at my internship (where they use Windows) and just recently obtained an iAudio X5L portable media player which behaves like an USB2 harddisk to the OS I wondered if I could manage to make Emacs portable.</p>
+
+<p>Short version: I could, the &#8220;hardest&#8221; part was in fact not even Emacs related, but my sheer lack of knowledge about Windows batch script.</p>
+
+<p>I started by creating a &#8220;SOFT&#8221; folder on my external drive (named E: by Windows on this box) and extracted the altest Emacs build from the ntemacs project in this directory, thus creating &#8220;E:\SOFT\emacs&#8221; with all the usual subfolders.</p>
+
+<p>Next I created a site-lisp/site-start.el file and added the following as suggested on usenet:</p>
+<div class='highlight'><pre><code class='bash'><span class='o'>(</span><span class='nb'>let</span> <span class='o'>((</span>home <span class='o'>(</span>concat <span class='o'>(</span>substring <span class='o'>(</span>car <span class='nb'>command</span>-line-args<span class='o'>)</span> 0 2<span class='o'>)</span> <span class='s2'>&quot;/SOFT&quot;</span><span class='o'>)))</span>
+  <span class='o'>(</span>setq user-init-file <span class='o'>(</span>concat home <span class='s2'>&quot;/config/.emacs&quot;</span><span class='o'>))</span>
+  <span class='o'>(</span>setq auto-save-list-file-prefix <span class='o'>(</span>concat home <span class='s2'>&quot;/config/.emacs.d/auto-save-list/.saves-&quot;</span><span class='o'>)))</span> 
+</code></pre></div>
+<p>You&#8217;ll need to adapt this to your particular environment of course.</p>
+
+<p>This makes Emacs load my user-init-file (aka &#8220;.emacs&#8221;) from &#8220;E:/SOFT/config/.emacs&#8221; and moves the auto-save-list to the external device as well, this should be superfluous though as I change the location of HOME as described later, but it accounts for the cases that you don&#8217;t want to change your HOME.</p>
+
+<p>This is in fact the entire Emacs side of the story, though you will probably have some work making your elisp packages work with relative paths if you didn&#8217;t take that into account before.</p>
+
+<p>Now you need to redefine HOME in Windows (well, you don&#8217;t need to but I find it useful), you can either do that globally with the System Properties or autoexec.bat in DOS based Windows versions, but I preferred to make it dynamic by writing a wrapper batfile that sets this variable and then launches Emacs. I named it runemacs.bat (how appropriate;)) and put it in Emacs&#8217; bin directory, the content looks like this:</p>
+<div class='highlight'><pre><code class='bash'><span class='nb'>set </span><span class='nv'>HOME</span><span class='o'>=</span>%CD%<span class='se'>\.</span>.<span class='se'>\.</span>.<span class='se'>\c</span>onfig
+runemacs 
+</code></pre></div>
+<!-- Published date -->
+<p>Published:
+<date title="2012-03-08T00:00:00+00:00" datetime="2012-03-08T00:00:00+00:00" pubdate>
+ <span class="month"><abbr>March</abbr></span>
+ <span class="day">08</span>
+ <span class="year">2012</span>
+ </date></p>
+
+ <p align="center">                       <a href="/blog/2012/02/27/Phoenix-GP-Wedding-Anniversary.html" Phoenix GP Wedding Anniversary">&laquo; Phoenix GP Wedding Anniversary</a>
+                                
+                                
+                          | 
+                                 
+                                 
+                    <a href="/blog/2012/03/19/John-and-Mairead-Visit.html" John and Mairead Visit">John and Mairead Visit &raquo;</a></p>
+                                 
+
+
+	</section><!-- end Column 1 -->
+	<footer><!-- Start Footer -->
+	<hr size="1" width="95%" align="center" color="black">
+<div align="right"><p>&copy; 2013 Keith Millar </p></div>
+<hr size="1" width="95%" align="center" color="black">
+
+	</footer><!-- End Footer -->
+</div>
+</body>
+</html>
