@@ -1,9 +1,17 @@
 ---
 layout: default
+<<<<<<< HEAD
 title: "keith's Diary and other Stuff"
 ---
 
 {% for post in site.categories.blog limit: 15 %}
+=======
+title: "keith's Diary and other Stuff" 
+tagline: Thoughts and Ramblings
+---
+
+{% for post in site.categories.Blog limit: 10 %}
+>>>>>>> d2f024256f31537701e8a5db1719a33a971d3705
 <h1>{{ post.title }}</h1>
 <p><em>{{ post.date | date:"%d %b %Y" }}</em></p>
   {% if post.excerpt %}
@@ -13,6 +21,9 @@ title: "keith's Diary and other Stuff"
         {{ post.content }}
     {% endif %}
 {% endfor %}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d2f024256f31537701e8a5db1719a33a971d3705
 <!-- Code taken from http://blog.darkrefraction.com/2012/jekyll-excerpt-plugin.html -->
