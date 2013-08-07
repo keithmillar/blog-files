@@ -1,0 +1,24 @@
+{% include head.html %}
+<div id="wrapper">
+	<header><!-- Start Header -->
+	{% include top-menu.html %}
+	</header><!-- End Header -->
+	<section><!-- Start Column 1-->
+<h1>{{ page.title }}</h1>
+
+<!-- Published date -->
+<p>Lasted Updated on: 
+<date title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}" pubdate>
+ <span class="month"><abbr>{{ page.date | date: '%B' }}</abbr></span>
+ <span class="day">{{ page.date | date: '%d' }}</span>
+ <span class="year">{{ page.date | date: '%Y' }}</span>
+ </date></p>
+<hr size="4" color="black">
+ {{ content }}
+	</section><!-- end Column 1 -->
+	<footer><!-- Start Footer -->
+	{% include footer.html %}
+	</footer><!-- End Footer -->
+</div>
+</body>
+</html>

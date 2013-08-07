@@ -1,0 +1,69 @@
+html	{
+margin:0;
+padding:0;
+color:#000;
+background:#a7a09a;
+}
+#wrap {
+width:950px;
+margin:0 auto;
+background:#99c;
+}
+#header {
+padding:5px 10px;
+background:#ddd;
+}
+
+#nav{                                                                                                                                                                                                          
+    border-width:1px 0;                                                                                                                                                                                        
+    list-style:none;                                                                                                                                                                                           
+    margin:0;                                                                                                                                                                                                  
+    padding:0;                                                                                                                                                                                                 
+    text-align:center;                                                                                                                                                                                         
+}                                                                                                                                                                                                              
+#nav li{                                                                                                                                                                                                       
+    display:inline;                                                                                                                                                                                            
+}                                                                                                                                                                                                              
+#nav a{                                                                                                                                                                                                        
+    display:inline-block;                                                                                                                                                                                      
+    padding:10px;                                                                                                                                                                                              
+}                                                                                                                                                                                                              
+                                                                                                                                                                                                               
+#nav {                                                                                                                                                                                                         
+list-style:none;                                                                                                                                                                                               
+margin:0;                                                                                                                                                                                                      
+padding:0 0 0 0;                                                                                                                                                                                               
+position:relative;                                                                                                                                                                                             
+}                                                                                                                                                                                                              
+                                                                                                                                                                                                               
+.nav li {                                                                                                                                                                                                      
+  float:left;                                                                                                                                                                                                  
+  margin:7px 37px 0 0;                                                                                                                                                                                         
+}                                                                                                                                                                                                              
+#nav li a {                                                                                                                                                                                                    
+ color:white;                                                                                                                                                                                                  
+  text-decoration:none;                                                                                                                                                                                        
+  padding:3px 10px;                                                                                                                                                                                            
+  border:none;                                                                                                                                                                                                 
+}                                                                                                                                                                                                              
+#nav li a:hover {                                                                                                                                                                                              
+  color:#FF2B06;                                                                                                                                                                                               
+}          
+
+#main {
+float:right;
+width:680px;
+padding:10px;
+background:#9c9;
+}
+#sidebar {
+float:left;
+width:230px;
+padding:10px;
+background:#99c;
+}
+#footer {
+clear:both;
+padding:5px 10px;
+background:#cc9;
+}
