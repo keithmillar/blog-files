@@ -4,7 +4,7 @@
 pygments: true
 safe: false
 url: http://localhost:4000
-excerpt_separator: <!--more tag--> 
+excerpt_separator: "{{ more }}"
 markdown_ext: markdown,mkd,mkdn,md
 markdown: redcarpet
 main_title: "Keith Millar"
